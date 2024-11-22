@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Quick Movie Search</h1>
+    <form id="search-form">
+        <label for="movie-title">Search by Title:</label>
+        <input type="text" id="movie-title" name="title" placeholder="Enter movie title">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Loading spinner (hidden by default) -->
+    <div id="loading" style="display: none;">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Search results will appear here -->
+    <div id="results"></div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Search by Genre</h1>
+<p>Select a genre and view the results:</p>
+
+<!-- Genre selection -->
+<div class="mb-3">
+    <label for="genre" class="form-label">Genre:</label>
+    <select id="genre" class="form-select">
+        <option value="">-- Select a Genre --</option>
+        <option value="Action">Action</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror</option>
+        <option value="Romance">Romance</option>
+        <!-- Add more genres as needed -->
+    </select>
+</div>
+
+<!-- Search button -->
+<button id="searchButton" class="btn btn-primary">Search</button>
+
+<!-- Loading spinner (hidden by default) -->
+<div id="loading" style="display: none;">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+<!-- Results container -->
+<div id="results" class="mt-4">
+    <!-- Movies will appear here -->
+</div>
+
+<!-- Reference to the JavaScript file -->
+<script src="{{ url_for('static', filename='js/bygenre.js') }}"></script>
+{% endblock %}

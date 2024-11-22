@@ -1,0 +1,481 @@
+2024-11-18 19:57:20,399 - INFO - Starting Flask app...
+2024-11-18 19:57:20,457 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-18 19:57:20,458 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 19:57:20,460 - INFO -  * Restarting with stat
+2024-11-18 19:57:20,875 - INFO - Starting Flask app...
+2024-11-18 19:57:20,900 - WARNING -  * Debugger is active!
+2024-11-18 19:57:20,916 - INFO -  * Debugger PIN: 168-368-613
+2024-11-18 19:57:38,193 - INFO - Home route accessed.
+2024-11-18 19:57:38,195 - INFO - 127.0.0.1 - - [18/Nov/2024 19:57:38] "GET / HTTP/1.1" 200 -
+2024-11-18 19:57:38,337 - INFO - 127.0.0.1 - - [18/Nov/2024 19:57:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-18 19:59:45,691 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment12_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-18 19:59:45,745 - INFO -  * Restarting with stat
+2024-11-18 19:59:46,227 - INFO - Starting Flask app...
+2024-11-18 19:59:46,256 - WARNING -  * Debugger is active!
+2024-11-18 19:59:46,276 - INFO -  * Debugger PIN: 168-368-613
+2024-11-18 20:00:51,574 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment12_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-18 20:00:51,617 - INFO -  * Restarting with stat
+2024-11-18 20:00:51,986 - INFO - Starting Flask app...
+2024-11-18 20:00:52,009 - WARNING -  * Debugger is active!
+2024-11-18 20:00:52,023 - INFO -  * Debugger PIN: 168-368-613
+2024-11-18 20:02:39,519 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment12_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-18 20:02:39,583 - INFO -  * Restarting with stat
+2024-11-18 20:02:40,138 - INFO - Starting Flask app...
+2024-11-18 20:02:40,171 - WARNING -  * Debugger is active!
+2024-11-18 20:02:40,185 - INFO -  * Debugger PIN: 168-368-613
+2024-11-18 20:05:33,750 - INFO - Fetching all movies...
+2024-11-18 20:05:38,342 - INFO - Successfully opened session 01efa612-6445-1ad9-ad83-d2d2530e086f
+2024-11-18 20:05:39,259 - INFO - Movies fetched successfully.
+2024-11-18 20:05:39,260 - INFO - Closing session 01efa612-6445-1ad9-ad83-d2d2530e086f
+2024-11-18 20:05:39,327 - INFO - Database connection closed after fetching movies.
+2024-11-18 20:05:39,328 - INFO - 127.0.0.1 - - [18/Nov/2024 20:05:39] "GET /movies HTTP/1.1" 200 -
+2024-11-18 20:06:34,789 - INFO - Fetching movie with ID: 5
+2024-11-18 20:06:35,067 - INFO - Successfully opened session 01efa612-8614-16fc-a6bc-c7edc7f86a3d
+2024-11-18 20:06:35,445 - ERROR - Error fetching movie with ID 5: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `id` cannot be resolved. Did you mean one of the following? [`title`, `genres`, `movie_id`]. SQLSTATE: 42703; line 1 pos 37
+2024-11-18 20:06:35,447 - INFO - Closing session 01efa612-8614-16fc-a6bc-c7edc7f86a3d
+2024-11-18 20:06:35,517 - INFO - Database connection closed after fetching movie ID: 5.
+2024-11-18 20:06:35,518 - INFO - 127.0.0.1 - - [18/Nov/2024 20:06:35] "[35m[1mGET /movie/5 HTTP/1.1[0m" 500 -
+2024-11-18 20:06:45,220 - INFO - 127.0.0.1 - - [18/Nov/2024 20:06:45] "[33mGET /movie/id=5 HTTP/1.1[0m" 404 -
+2024-11-18 20:06:49,356 - INFO - 127.0.0.1 - - [18/Nov/2024 20:06:49] "[33mGET /movie/id?=5 HTTP/1.1[0m" 404 -
+2024-11-18 20:06:56,113 - INFO - 127.0.0.1 - - [18/Nov/2024 20:06:56] "[33mGET /movie/?id=5 HTTP/1.1[0m" 404 -
+2024-11-18 20:07:36,126 - INFO - Fetching movie with ID: 5
+2024-11-18 20:07:36,448 - INFO - Successfully opened session 01efa612-aaab-1bc3-9965-d8ae319c5ab1
+2024-11-18 20:07:36,803 - ERROR - Error fetching movie with ID 5: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `id` cannot be resolved. Did you mean one of the following? [`title`, `genres`, `movie_id`]. SQLSTATE: 42703; line 1 pos 37
+2024-11-18 20:07:36,804 - INFO - Closing session 01efa612-aaab-1bc3-9965-d8ae319c5ab1
+2024-11-18 20:07:36,866 - INFO - Database connection closed after fetching movie ID: 5.
+2024-11-18 20:07:36,867 - INFO - 127.0.0.1 - - [18/Nov/2024 20:07:36] "[35m[1mGET /movie/5 HTTP/1.1[0m" 500 -
+2024-11-18 20:07:54,712 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment12_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-18 20:07:54,894 - INFO -  * Restarting with stat
+2024-11-18 20:07:55,465 - INFO - Starting Flask app...
+2024-11-18 20:07:55,503 - WARNING -  * Debugger is active!
+2024-11-18 20:07:55,519 - INFO -  * Debugger PIN: 168-368-613
+2024-11-18 20:08:00,850 - INFO - Fetching movie with ID: 5
+2024-11-18 20:08:02,252 - INFO - Successfully opened session 01efa612-ba0e-1961-8767-9005ce885bdd
+2024-11-18 20:08:02,609 - INFO - Movie with ID 5 fetched successfully.
+2024-11-18 20:08:02,609 - INFO - Closing session 01efa612-ba0e-1961-8767-9005ce885bdd
+2024-11-18 20:08:02,675 - INFO - Database connection closed after fetching movie ID: 5.
+2024-11-18 20:08:02,676 - INFO - 127.0.0.1 - - [18/Nov/2024 20:08:02] "GET /movie/5 HTTP/1.1" 200 -
+2024-11-18 20:10:28,820 - INFO - Fetching all movies...
+2024-11-18 20:10:29,074 - INFO - Successfully opened session 01efa613-1191-11cc-a711-f474775c5725
+2024-11-18 20:10:29,498 - INFO - Movies fetched successfully.
+2024-11-18 20:10:29,499 - INFO - Closing session 01efa613-1191-11cc-a711-f474775c5725
+2024-11-18 20:10:29,572 - INFO - Database connection closed after fetching movies.
+2024-11-18 20:10:29,572 - INFO - 127.0.0.1 - - [18/Nov/2024 20:10:29] "GET /movies HTTP/1.1" 200 -
+2024-11-18 20:11:11,918 - INFO - Fetching movie with ID: 5
+2024-11-18 20:11:12,143 - INFO - Successfully opened session 01efa613-2b3c-16c4-963b-77c7ba6e071d
+2024-11-18 20:11:12,473 - INFO - Movie with ID 5 fetched successfully.
+2024-11-18 20:11:12,474 - INFO - Closing session 01efa613-2b3c-16c4-963b-77c7ba6e071d
+2024-11-18 20:11:12,535 - INFO - Database connection closed after fetching movie ID: 5.
+2024-11-18 20:11:12,536 - INFO - 127.0.0.1 - - [18/Nov/2024 20:11:12] "GET /movie/5 HTTP/1.1" 200 -
+2024-11-18 20:17:09,443 - INFO - 127.0.0.1 - - [18/Nov/2024 20:17:09] "[33mGET /movies/search?title=inception HTTP/1.1[0m" 404 -
+2024-11-18 20:18:14,966 - INFO - 127.0.0.1 - - [18/Nov/2024 20:18:14] "[33mGET /movies/search?title=inception HTTP/1.1[0m" 404 -
+2024-11-18 20:18:41,439 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment12_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-18 20:18:41,819 - INFO -  * Restarting with stat
+2024-11-18 20:18:42,647 - INFO - Starting Flask app...
+2024-11-18 20:18:42,685 - WARNING -  * Debugger is active!
+2024-11-18 20:18:42,702 - INFO -  * Debugger PIN: 168-368-613
+2024-11-18 20:18:56,656 - INFO - 127.0.0.1 - - [18/Nov/2024 20:18:56] "[33mGET /movies/search?title=inception HTTP/1.1[0m" 404 -
+2024-11-18 20:19:08,780 - INFO - Searching movies with title containing: 'inception'
+2024-11-18 20:19:10,924 - INFO - Successfully opened session 01efa614-489e-17a3-92f7-9e14404b09a1
+2024-11-18 20:19:11,428 - INFO - Movies search completed for title: 'inception'. Found 0 results.
+2024-11-18 20:19:11,428 - INFO - Closing session 01efa614-489e-17a3-92f7-9e14404b09a1
+2024-11-18 20:19:11,507 - INFO - Database connection closed after searching movies with title: 'inception'.
+2024-11-18 20:19:11,508 - INFO - 127.0.0.1 - - [18/Nov/2024 20:19:11] "GET /search?title=inception HTTP/1.1" 200 -
+2024-11-18 20:21:24,603 - INFO - Searching movies with genre containing: 'Anim'
+2024-11-18 20:21:24,853 - INFO - Successfully opened session 01efa614-9871-1b64-a398-df7628cedd72
+2024-11-18 20:21:25,325 - INFO - Movies search completed for genre: 'Anim'. Found 105 results.
+2024-11-18 20:21:25,326 - INFO - Closing session 01efa614-9871-1b64-a398-df7628cedd72
+2024-11-18 20:21:25,383 - INFO - Database connection closed after searching movies with genre: 'Anim'.
+2024-11-18 20:21:25,384 - INFO - 127.0.0.1 - - [18/Nov/2024 20:21:25] "GET /bygenre?genre=Anim HTTP/1.1" 200 -
+2024-11-18 20:26:45,759 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment12_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-18 20:26:46,132 - INFO -  * Restarting with stat
+2024-11-19 12:01:53,166 - INFO - Starting Flask app...
+2024-11-19 12:01:53,236 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-19 12:01:53,236 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 12:01:53,240 - INFO -  * Restarting with stat
+2024-11-19 12:01:53,717 - INFO - Starting Flask app...
+2024-11-19 12:01:53,739 - WARNING -  * Debugger is active!
+2024-11-19 12:01:53,754 - INFO -  * Debugger PIN: 923-605-549
+2024-11-19 12:01:58,788 - INFO - Home route accessed.
+2024-11-19 12:01:58,809 - INFO - 127.0.0.1 - - [19/Nov/2024 12:01:58] "GET / HTTP/1.1" 200 -
+2024-11-19 12:01:59,049 - INFO - 127.0.0.1 - - [19/Nov/2024 12:01:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-19 12:02:11,869 - INFO - Home route accessed.
+2024-11-19 12:02:11,872 - INFO - 127.0.0.1 - - [19/Nov/2024 12:02:11] "GET / HTTP/1.1" 200 -
+2024-11-19 12:02:30,969 - INFO - Fetching all movies...
+2024-11-19 12:02:34,741 - INFO - Successfully opened session 01efa698-1435-1db1-a4c1-a45d5ca93a59
+2024-11-19 12:02:44,424 - INFO - Movies fetched successfully.
+2024-11-19 12:02:44,577 - INFO - Closing session 01efa698-1435-1db1-a4c1-a45d5ca93a59
+2024-11-19 12:02:44,644 - INFO - Database connection closed after fetching movies.
+2024-11-19 12:02:44,646 - INFO - 127.0.0.1 - - [19/Nov/2024 12:02:44] "GET /movies HTTP/1.1" 200 -
+2024-11-19 12:04:39,615 - INFO - Classifying input text: I feel like I want a rush of emotion, watch something that makes me feel intense feelings
+2024-11-19 12:04:40,047 - INFO - Classified genre: Action
+2024-11-19 12:04:40,291 - INFO - Successfully opened session 01efa698-5f16-1573-903a-53837658ca88
+2024-11-19 12:04:42,794 - INFO - Movies search completed for genre: 'Action'. Found 503 results.
+2024-11-19 12:04:42,798 - INFO - Closing session 01efa698-5f16-1573-903a-53837658ca88
+2024-11-19 12:04:42,862 - INFO - Database connection closed after searching movies with genre: 'Action'.
+2024-11-19 12:04:42,865 - INFO - 127.0.0.1 - - [19/Nov/2024 12:04:42] "POST /classify HTTP/1.1" 200 -
+2024-11-19 12:04:58,382 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment13_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-19 12:04:58,529 - INFO -  * Restarting with stat
+2024-11-19 12:04:59,317 - INFO - Starting Flask app...
+2024-11-19 12:04:59,345 - WARNING -  * Debugger is active!
+2024-11-19 12:04:59,361 - INFO -  * Debugger PIN: 923-605-549
+2024-11-19 12:06:05,918 - INFO - Home route accessed.
+2024-11-19 12:06:05,931 - INFO - 127.0.0.1 - - [19/Nov/2024 12:06:05] "GET / HTTP/1.1" 200 -
+2024-11-19 12:06:07,705 - INFO - Home route accessed.
+2024-11-19 12:06:07,706 - INFO - 127.0.0.1 - - [19/Nov/2024 12:06:07] "GET / HTTP/1.1" 200 -
+2024-11-19 12:07:33,789 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment13_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-19 12:07:33,842 - INFO -  * Restarting with stat
+2024-11-19 12:20:28,133 - INFO - Starting Flask app...
+2024-11-19 12:20:28,178 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-19 12:20:28,179 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 12:20:28,183 - INFO -  * Restarting with stat
+2024-11-19 12:20:28,655 - INFO - Starting Flask app...
+2024-11-19 12:20:28,683 - WARNING -  * Debugger is active!
+2024-11-19 12:20:28,697 - INFO -  * Debugger PIN: 923-605-549
+2024-11-19 12:20:33,117 - INFO - Home route accessed.
+2024-11-19 12:20:33,128 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:33] "GET / HTTP/1.1" 200 -
+2024-11-19 12:20:34,776 - INFO - Search_page route accessed.
+2024-11-19 12:20:34,779 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:34] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:20:34,975 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:34] "GET /static/js/search.js HTTP/1.1" 200 -
+2024-11-19 12:20:36,455 - INFO - Bygenre_page route accessed.
+2024-11-19 12:20:36,458 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:36] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:20:38,411 - INFO - Search_page route accessed.
+2024-11-19 12:20:38,412 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:38] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:20:38,435 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:38] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:20:40,620 - INFO - Home route accessed.
+2024-11-19 12:20:40,622 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:40] "GET / HTTP/1.1" 200 -
+2024-11-19 12:20:44,363 - INFO - Search_page route accessed.
+2024-11-19 12:20:44,365 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:44] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:20:44,389 - INFO - 127.0.0.1 - - [19/Nov/2024 12:20:44] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:21:13,616 - INFO - Searching movies with title containing: 'Toy'
+2024-11-19 12:21:15,329 - INFO - Successfully opened session 01efa69a-b02e-1867-9566-6e623ddc409c
+2024-11-19 12:21:16,406 - INFO - Movies search completed for title: 'Toy'. Found 5 results.
+2024-11-19 12:21:16,408 - INFO - Closing session 01efa69a-b02e-1867-9566-6e623ddc409c
+2024-11-19 12:21:16,477 - INFO - Database connection closed after searching movies with title: 'Toy'.
+2024-11-19 12:21:16,478 - INFO - 127.0.0.1 - - [19/Nov/2024 12:21:16] "GET /search?title=Toy HTTP/1.1" 200 -
+2024-11-19 12:21:24,323 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:21:24,518 - INFO - Successfully opened session 01efa69a-b5a8-19a6-94bd-45dabd332d0f
+2024-11-19 12:21:25,341 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:21:25,342 - INFO - Closing session 01efa69a-b5a8-19a6-94bd-45dabd332d0f
+2024-11-19 12:21:25,421 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:21:25,422 - INFO - 127.0.0.1 - - [19/Nov/2024 12:21:25] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:21:34,555 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:21:34,767 - INFO - Successfully opened session 01efa69a-bbc4-1373-97ef-41280edda42a
+2024-11-19 12:21:35,185 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:21:35,186 - INFO - Closing session 01efa69a-bbc4-1373-97ef-41280edda42a
+2024-11-19 12:21:35,256 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:21:35,256 - INFO - 127.0.0.1 - - [19/Nov/2024 12:21:35] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:22:04,400 - INFO - Bygenre_page route accessed.
+2024-11-19 12:22:04,401 - INFO - 127.0.0.1 - - [19/Nov/2024 12:22:04] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:22:06,869 - INFO - Search_page route accessed.
+2024-11-19 12:22:06,871 - INFO - 127.0.0.1 - - [19/Nov/2024 12:22:06] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:22:06,890 - INFO - 127.0.0.1 - - [19/Nov/2024 12:22:06] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:22:10,332 - INFO - Bygenre_page route accessed.
+2024-11-19 12:22:10,333 - INFO - 127.0.0.1 - - [19/Nov/2024 12:22:10] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:22:11,316 - INFO - Search_page route accessed.
+2024-11-19 12:22:11,317 - INFO - 127.0.0.1 - - [19/Nov/2024 12:22:11] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:22:11,340 - INFO - 127.0.0.1 - - [19/Nov/2024 12:22:11] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:22:12,644 - INFO - Bygenre_page route accessed.
+2024-11-19 12:22:12,646 - INFO - 127.0.0.1 - - [19/Nov/2024 12:22:12] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:27:31,035 - INFO - Bygenre_page route accessed.
+2024-11-19 12:27:31,039 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:31] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:27:31,060 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:31] "[33mGET /static/js/bygenre.js HTTP/1.1[0m" 404 -
+2024-11-19 12:27:41,911 - INFO - Bygenre_page route accessed.
+2024-11-19 12:27:41,912 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:41] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:27:41,933 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:41] "[33mGET /static/js/bygenre.js HTTP/1.1[0m" 404 -
+2024-11-19 12:27:43,416 - INFO - Search_page route accessed.
+2024-11-19 12:27:43,417 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:43] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:27:43,439 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:43] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:27:49,650 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:27:50,386 - INFO - Successfully opened session 01efa69b-9ba8-11f9-89b9-9fd663581403
+2024-11-19 12:27:51,144 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:27:51,145 - INFO - Closing session 01efa69b-9ba8-11f9-89b9-9fd663581403
+2024-11-19 12:27:51,207 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:27:51,207 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:51] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:27:52,525 - INFO - Bygenre_page route accessed.
+2024-11-19 12:27:52,527 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:52] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:27:52,549 - INFO - 127.0.0.1 - - [19/Nov/2024 12:27:52] "[33mGET /static/js/bygenre.js HTTP/1.1[0m" 404 -
+2024-11-19 12:29:00,059 - INFO - Starting Flask app...
+2024-11-19 12:29:00,101 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-19 12:29:00,103 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 12:29:00,105 - INFO -  * Restarting with stat
+2024-11-19 12:29:00,552 - INFO - Starting Flask app...
+2024-11-19 12:29:00,572 - WARNING -  * Debugger is active!
+2024-11-19 12:29:00,588 - INFO -  * Debugger PIN: 923-605-549
+2024-11-19 12:29:06,275 - INFO - Bygenre_page route accessed.
+2024-11-19 12:29:06,283 - INFO - 127.0.0.1 - - [19/Nov/2024 12:29:06] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:29:06,307 - INFO - 127.0.0.1 - - [19/Nov/2024 12:29:06] "[33mGET /static/js/bygenre.js HTTP/1.1[0m" 404 -
+2024-11-19 12:29:18,712 - INFO - Search_page route accessed.
+2024-11-19 12:29:18,715 - INFO - 127.0.0.1 - - [19/Nov/2024 12:29:18] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:29:18,919 - INFO - 127.0.0.1 - - [19/Nov/2024 12:29:18] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:29:23,257 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:29:24,269 - INFO - Successfully opened session 01efa69b-d39c-198a-af13-1700b703f093
+2024-11-19 12:29:24,727 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:29:24,728 - INFO - Closing session 01efa69b-d39c-198a-af13-1700b703f093
+2024-11-19 12:29:24,791 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:29:24,791 - INFO - 127.0.0.1 - - [19/Nov/2024 12:29:24] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:29:26,013 - INFO - Bygenre_page route accessed.
+2024-11-19 12:29:26,014 - INFO - 127.0.0.1 - - [19/Nov/2024 12:29:26] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:29:26,038 - INFO - 127.0.0.1 - - [19/Nov/2024 12:29:26] "[33mGET /static/js/bygenre.js HTTP/1.1[0m" 404 -
+2024-11-19 12:30:33,595 - INFO -  * Detected change in 'C:\\Users\\ALEJANDRO\\Documents\\7. DUKE\\1. IDS 706 - Data Engineering\\assignments\\IDS706_alejandroparedeslatorre_assignment13_flaskDockerAWS\\backend\\app.py', reloading
+2024-11-19 12:30:33,721 - INFO -  * Restarting with stat
+2024-11-19 12:30:34,238 - INFO - Starting Flask app...
+2024-11-19 12:30:34,263 - WARNING -  * Debugger is active!
+2024-11-19 12:30:34,279 - INFO -  * Debugger PIN: 923-605-549
+2024-11-19 12:33:18,931 - INFO - Bygenre_page route accessed.
+2024-11-19 12:33:18,941 - INFO - 127.0.0.1 - - [19/Nov/2024 12:33:18] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:33:19,141 - INFO - 127.0.0.1 - - [19/Nov/2024 12:33:19] "GET /static/js/bygenre.js HTTP/1.1" 200 -
+2024-11-19 12:33:21,470 - INFO - Searching movies with genre containing: 'Comedy'
+2024-11-19 12:33:22,481 - INFO - Successfully opened session 01efa69c-619b-1c83-a87d-0ac6e1109469
+2024-11-19 12:33:23,192 - INFO - Movies search completed for genre: 'Comedy'. Found 1200 results.
+2024-11-19 12:33:23,198 - INFO - Closing session 01efa69c-619b-1c83-a87d-0ac6e1109469
+2024-11-19 12:33:23,264 - INFO - Database connection closed after searching movies with genre: 'Comedy'.
+2024-11-19 12:33:23,265 - INFO - 127.0.0.1 - - [19/Nov/2024 12:33:23] "GET /bygenre?genre=Comedy HTTP/1.1" 200 -
+2024-11-19 12:33:27,857 - INFO - Search_page route accessed.
+2024-11-19 12:33:27,859 - INFO - 127.0.0.1 - - [19/Nov/2024 12:33:27] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:33:27,884 - INFO - 127.0.0.1 - - [19/Nov/2024 12:33:27] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:33:28,995 - INFO - Bygenre_page route accessed.
+2024-11-19 12:33:28,996 - INFO - 127.0.0.1 - - [19/Nov/2024 12:33:28] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:33:29,024 - INFO - 127.0.0.1 - - [19/Nov/2024 12:33:29] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:39:02,808 - INFO - Search_page route accessed.
+2024-11-19 12:39:02,813 - INFO - 127.0.0.1 - - [19/Nov/2024 12:39:02] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:39:02,839 - INFO - 127.0.0.1 - - [19/Nov/2024 12:39:02] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-11-19 12:39:02,849 - INFO - 127.0.0.1 - - [19/Nov/2024 12:39:02] "GET /static/js/search.js HTTP/1.1" 200 -
+2024-11-19 12:39:07,993 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:39:08,221 - INFO - Successfully opened session 01efa69d-2fae-1e40-97d6-6a2a1c984e01
+2024-11-19 12:39:08,766 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:39:08,766 - INFO - Closing session 01efa69d-2fae-1e40-97d6-6a2a1c984e01
+2024-11-19 12:39:08,839 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:39:08,839 - INFO - 127.0.0.1 - - [19/Nov/2024 12:39:08] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:39:11,242 - INFO - Bygenre_page route accessed.
+2024-11-19 12:39:11,243 - INFO - 127.0.0.1 - - [19/Nov/2024 12:39:11] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:39:11,267 - INFO - 127.0.0.1 - - [19/Nov/2024 12:39:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:39:11,270 - INFO - 127.0.0.1 - - [19/Nov/2024 12:39:11] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:41:08,230 - INFO - Bygenre_page route accessed.
+2024-11-19 12:41:08,235 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:08] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:41:08,263 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:41:08,271 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:08] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:41:10,585 - INFO - Searching movies with genre containing: 'Action'
+2024-11-19 12:41:10,761 - INFO - Successfully opened session 01efa69d-78ba-1a18-8250-fb861b7fb89c
+2024-11-19 12:41:11,146 - INFO - Movies search completed for genre: 'Action'. Found 503 results.
+2024-11-19 12:41:11,149 - INFO - Closing session 01efa69d-78ba-1a18-8250-fb861b7fb89c
+2024-11-19 12:41:11,215 - INFO - Database connection closed after searching movies with genre: 'Action'.
+2024-11-19 12:41:11,216 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:11] "GET /bygenre?genre=Action HTTP/1.1" 200 -
+2024-11-19 12:41:13,048 - INFO - Searching movies with genre containing: 'Action'
+2024-11-19 12:41:13,221 - INFO - Successfully opened session 01efa69d-7a31-138d-9553-9fe5364c892f
+2024-11-19 12:41:13,565 - INFO - Movies search completed for genre: 'Action'. Found 503 results.
+2024-11-19 12:41:13,568 - INFO - Closing session 01efa69d-7a31-138d-9553-9fe5364c892f
+2024-11-19 12:41:13,639 - INFO - Database connection closed after searching movies with genre: 'Action'.
+2024-11-19 12:41:13,639 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:13] "GET /bygenre?genre=Action HTTP/1.1" 200 -
+2024-11-19 12:41:15,207 - INFO - Searching movies with genre containing: 'Comedy'
+2024-11-19 12:41:15,390 - INFO - Successfully opened session 01efa69d-7b7a-1ef6-8e1e-87e1c4f80595
+2024-11-19 12:41:15,755 - INFO - Movies search completed for genre: 'Comedy'. Found 1200 results.
+2024-11-19 12:41:15,761 - INFO - Closing session 01efa69d-7b7a-1ef6-8e1e-87e1c4f80595
+2024-11-19 12:41:15,822 - INFO - Database connection closed after searching movies with genre: 'Comedy'.
+2024-11-19 12:41:15,823 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:15] "GET /bygenre?genre=Comedy HTTP/1.1" 200 -
+2024-11-19 12:41:45,655 - INFO - Bygenre_page route accessed.
+2024-11-19 12:41:45,658 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:45] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:41:45,690 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:41:45,698 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:45] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:41:48,047 - INFO - Searching movies with genre containing: 'Action'
+2024-11-19 12:41:48,245 - INFO - Successfully opened session 01efa69d-8f10-1781-b50c-ef62820d2173
+2024-11-19 12:41:48,567 - INFO - Movies search completed for genre: 'Action'. Found 503 results.
+2024-11-19 12:41:48,570 - INFO - Closing session 01efa69d-8f10-1781-b50c-ef62820d2173
+2024-11-19 12:41:48,637 - INFO - Database connection closed after searching movies with genre: 'Action'.
+2024-11-19 12:41:48,637 - INFO - 127.0.0.1 - - [19/Nov/2024 12:41:48] "GET /bygenre?genre=Action HTTP/1.1" 200 -
+2024-11-19 12:42:56,472 - INFO - Search_page route accessed.
+2024-11-19 12:42:56,473 - INFO - 127.0.0.1 - - [19/Nov/2024 12:42:56] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:42:56,504 - INFO - 127.0.0.1 - - [19/Nov/2024 12:42:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:42:56,510 - INFO - 127.0.0.1 - - [19/Nov/2024 12:42:56] "GET /static/js/search.js HTTP/1.1" 200 -
+2024-11-19 12:43:01,201 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:43:01,484 - INFO - Successfully opened session 01efa69d-bab8-1510-85f3-09bdad3f964c
+2024-11-19 12:43:02,150 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:43:02,151 - INFO - Closing session 01efa69d-bab8-1510-85f3-09bdad3f964c
+2024-11-19 12:43:02,224 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:43:02,225 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:02] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:43:03,484 - INFO - Bygenre_page route accessed.
+2024-11-19 12:43:03,488 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:03] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:43:03,513 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:43:03,522 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:03] "GET /static/js/bygenre.js HTTP/1.1" 200 -
+2024-11-19 12:43:06,325 - INFO - Searching movies with genre containing: 'Action'
+2024-11-19 12:43:06,561 - INFO - Successfully opened session 01efa69d-bdb9-1caa-9369-8426d8c9ca2c
+2024-11-19 12:43:06,972 - INFO - Movies search completed for genre: 'Action'. Found 503 results.
+2024-11-19 12:43:06,976 - INFO - Closing session 01efa69d-bdb9-1caa-9369-8426d8c9ca2c
+2024-11-19 12:43:07,040 - INFO - Database connection closed after searching movies with genre: 'Action'.
+2024-11-19 12:43:07,042 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:07] "GET /bygenre?genre=Action HTTP/1.1" 200 -
+2024-11-19 12:43:14,169 - INFO - Search_page route accessed.
+2024-11-19 12:43:14,171 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:14] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:43:14,201 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:43:14,209 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:14] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:43:20,657 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:43:20,843 - INFO - Successfully opened session 01efa69d-c642-13b8-bf0f-8eee41e4dd13
+2024-11-19 12:43:21,209 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:43:21,210 - INFO - Closing session 01efa69d-c642-13b8-bf0f-8eee41e4dd13
+2024-11-19 12:43:21,269 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:43:21,270 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:21] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:43:22,372 - INFO - Bygenre_page route accessed.
+2024-11-19 12:43:22,373 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:22] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:43:22,399 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:43:22,400 - INFO - 127.0.0.1 - - [19/Nov/2024 12:43:22] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:44:14,715 - INFO - Bygenre_page route accessed.
+2024-11-19 12:44:14,719 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:14] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:44:14,743 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:44:14,748 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:14] "GET /static/js/bygenre.js HTTP/1.1" 200 -
+2024-11-19 12:44:15,952 - INFO - Bygenre_page route accessed.
+2024-11-19 12:44:15,954 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:15] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:44:15,972 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:44:15,979 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:15] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:44:16,982 - INFO - Search_page route accessed.
+2024-11-19 12:44:16,983 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:16] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:44:17,006 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:44:17,007 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:17] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:44:17,915 - INFO - Bygenre_page route accessed.
+2024-11-19 12:44:17,916 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:17] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:44:17,939 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:44:17,939 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:17] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:44:20,092 - INFO - Searching movies with genre containing: 'Drama'
+2024-11-19 12:44:20,292 - INFO - Successfully opened session 01efa69d-e9b2-1199-92e8-72e87df71ba9
+2024-11-19 12:44:20,945 - INFO - Movies search completed for genre: 'Drama'. Found 1603 results.
+2024-11-19 12:44:20,952 - INFO - Closing session 01efa69d-e9b2-1199-92e8-72e87df71ba9
+2024-11-19 12:44:21,024 - INFO - Database connection closed after searching movies with genre: 'Drama'.
+2024-11-19 12:44:21,025 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:21] "GET /bygenre?genre=Drama HTTP/1.1" 200 -
+2024-11-19 12:44:22,692 - INFO - Search_page route accessed.
+2024-11-19 12:44:22,694 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:22] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:44:22,719 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:44:22,729 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:22] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:44:27,043 - INFO - Searching movies with title containing: 'Toy Story'
+2024-11-19 12:44:27,276 - INFO - Successfully opened session 01efa69d-edda-1ce2-97b1-c032805dacf2
+2024-11-19 12:44:27,542 - INFO - Movies search completed for title: 'Toy Story'. Found 2 results.
+2024-11-19 12:44:27,543 - INFO - Closing session 01efa69d-edda-1ce2-97b1-c032805dacf2
+2024-11-19 12:44:27,610 - INFO - Database connection closed after searching movies with title: 'Toy Story'.
+2024-11-19 12:44:27,611 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:27] "GET /search?title=Toy%20Story HTTP/1.1" 200 -
+2024-11-19 12:44:28,991 - INFO - Home route accessed.
+2024-11-19 12:44:28,996 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:28] "GET / HTTP/1.1" 200 -
+2024-11-19 12:44:29,019 - INFO - 127.0.0.1 - - [19/Nov/2024 12:44:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:47:12,581 - INFO - Home route accessed.
+2024-11-19 12:47:12,585 - INFO - 127.0.0.1 - - [19/Nov/2024 12:47:12] "GET / HTTP/1.1" 200 -
+2024-11-19 12:47:12,608 - INFO - 127.0.0.1 - - [19/Nov/2024 12:47:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:47:12,620 - INFO - 127.0.0.1 - - [19/Nov/2024 12:47:12] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-11-19 12:51:17,201 - INFO - Home route accessed.
+2024-11-19 12:51:17,205 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:17] "GET / HTTP/1.1" 200 -
+2024-11-19 12:51:17,228 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:51:17,237 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:17] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-11-19 12:51:18,136 - INFO - Home route accessed.
+2024-11-19 12:51:18,138 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:18] "GET / HTTP/1.1" 200 -
+2024-11-19 12:51:18,160 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:51:18,163 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:18] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:51:19,046 - INFO - Home route accessed.
+2024-11-19 12:51:19,047 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:19] "GET / HTTP/1.1" 200 -
+2024-11-19 12:51:19,068 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:51:19,072 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:19] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:51:20,420 - INFO - Search_page route accessed.
+2024-11-19 12:51:20,421 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:20] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:51:20,447 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:51:20,453 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:20] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:51:21,065 - INFO - Bygenre_page route accessed.
+2024-11-19 12:51:21,070 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:21] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:51:21,093 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:51:21,102 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:21] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:51:21,539 - INFO - Search_page route accessed.
+2024-11-19 12:51:21,540 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:21] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:51:21,564 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:51:21,573 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:21] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:51:21,975 - INFO - Home route accessed.
+2024-11-19 12:51:21,977 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:21] "GET / HTTP/1.1" 200 -
+2024-11-19 12:51:22,001 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:51:22,010 - INFO - 127.0.0.1 - - [19/Nov/2024 12:51:22] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:53:51,686 - INFO - Home route accessed.
+2024-11-19 12:53:51,690 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:51] "GET / HTTP/1.1" 200 -
+2024-11-19 12:53:51,716 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:53:51,737 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:51] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-11-19 12:53:52,309 - INFO - Home route accessed.
+2024-11-19 12:53:52,310 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:52] "GET / HTTP/1.1" 200 -
+2024-11-19 12:53:52,329 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:53:52,330 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:52] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:53:53,167 - INFO - Home route accessed.
+2024-11-19 12:53:53,169 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:53] "GET / HTTP/1.1" 200 -
+2024-11-19 12:53:53,195 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:53:53,200 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:53] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:53:53,685 - INFO - Search_page route accessed.
+2024-11-19 12:53:53,687 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:53] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:53:53,719 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:53:53,727 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:53] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:53:54,547 - INFO - Bygenre_page route accessed.
+2024-11-19 12:53:54,549 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:54] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:53:54,576 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:53:54,579 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:54] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:53:55,410 - INFO - Home route accessed.
+2024-11-19 12:53:55,411 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:55] "GET / HTTP/1.1" 200 -
+2024-11-19 12:53:55,449 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:53:55,450 - INFO - 127.0.0.1 - - [19/Nov/2024 12:53:55] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:55:50,554 - INFO - Starting Flask app...
+2024-11-19 12:55:50,607 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-19 12:55:50,608 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 12:55:50,611 - INFO -  * Restarting with stat
+2024-11-19 12:55:51,078 - INFO - Starting Flask app...
+2024-11-19 12:55:51,104 - WARNING -  * Debugger is active!
+2024-11-19 12:55:51,118 - INFO -  * Debugger PIN: 923-605-549
+2024-11-19 12:55:57,766 - INFO - Home route accessed.
+2024-11-19 12:55:57,777 - INFO - 127.0.0.1 - - [19/Nov/2024 12:55:57] "GET / HTTP/1.1" 200 -
+2024-11-19 12:55:58,199 - INFO - 127.0.0.1 - - [19/Nov/2024 12:55:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:55:58,200 - INFO - 127.0.0.1 - - [19/Nov/2024 12:55:58] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-11-19 12:55:59,539 - INFO - Search_page route accessed.
+2024-11-19 12:55:59,544 - INFO - 127.0.0.1 - - [19/Nov/2024 12:55:59] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:55:59,573 - INFO - 127.0.0.1 - - [19/Nov/2024 12:55:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:55:59,575 - INFO - 127.0.0.1 - - [19/Nov/2024 12:55:59] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:56:00,271 - INFO - Home route accessed.
+2024-11-19 12:56:00,272 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:00] "GET / HTTP/1.1" 200 -
+2024-11-19 12:56:00,291 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:56:00,297 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:00] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:56:00,830 - INFO - Bygenre_page route accessed.
+2024-11-19 12:56:00,834 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:00] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:56:00,857 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:56:00,864 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:00] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:56:01,662 - INFO - Home route accessed.
+2024-11-19 12:56:01,664 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:01] "GET / HTTP/1.1" 200 -
+2024-11-19 12:56:01,687 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:56:01,688 - INFO - 127.0.0.1 - - [19/Nov/2024 12:56:01] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:59:40,276 - INFO - Starting Flask app...
+2024-11-19 12:59:40,313 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-19 12:59:40,315 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 12:59:40,317 - INFO -  * Restarting with stat
+2024-11-19 12:59:40,844 - INFO - Starting Flask app...
+2024-11-19 12:59:40,873 - WARNING -  * Debugger is active!
+2024-11-19 12:59:40,886 - INFO -  * Debugger PIN: 923-605-549
+2024-11-19 12:59:43,668 - INFO - Home route accessed.
+2024-11-19 12:59:43,677 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:43] "GET / HTTP/1.1" 200 -
+2024-11-19 12:59:44,104 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:59:44,110 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:44] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-11-19 12:59:47,338 - INFO - Home route accessed.
+2024-11-19 12:59:47,339 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:47] "GET / HTTP/1.1" 200 -
+2024-11-19 12:59:47,365 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:59:47,369 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:47] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 12:59:47,868 - INFO - Search_page route accessed.
+2024-11-19 12:59:47,872 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:47] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:59:47,893 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:59:47,900 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:47] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:59:48,462 - INFO - Bygenre_page route accessed.
+2024-11-19 12:59:48,467 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:48] "GET /bygenre_page HTTP/1.1" 200 -
+2024-11-19 12:59:48,496 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:59:48,505 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:48] "[36mGET /static/js/bygenre.js HTTP/1.1[0m" 304 -
+2024-11-19 12:59:49,131 - INFO - Search_page route accessed.
+2024-11-19 12:59:49,132 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:49] "GET /search_page HTTP/1.1" 200 -
+2024-11-19 12:59:49,163 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:59:49,173 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:49] "[36mGET /static/js/search.js HTTP/1.1[0m" 304 -
+2024-11-19 12:59:49,672 - INFO - Home route accessed.
+2024-11-19 12:59:49,674 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:49] "GET / HTTP/1.1" 200 -
+2024-11-19 12:59:49,698 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-19 12:59:49,707 - INFO - 127.0.0.1 - - [19/Nov/2024 12:59:49] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-11-19 13:00:21,208 - INFO - Classifying input text: I want to see a violent movie or for action
+2024-11-19 13:00:21,661 - INFO - Classified genre: Action
+2024-11-19 13:00:23,300 - INFO - Successfully opened session 01efa6a0-27a1-13bf-b785-d88693cb16bb
+2024-11-19 13:00:34,055 - INFO - Movies search completed for genre: 'Action'. Found 503 results.
+2024-11-19 13:00:34,238 - INFO - Closing session 01efa6a0-27a1-13bf-b785-d88693cb16bb
+2024-11-19 13:00:34,311 - INFO - Database connection closed after searching movies with genre: 'Action'.
+2024-11-19 13:00:34,312 - INFO - 127.0.0.1 - - [19/Nov/2024 13:00:34] "POST /classify HTTP/1.1" 200 -

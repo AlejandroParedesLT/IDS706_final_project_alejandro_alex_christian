@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Welcome to the Movie Database!</h1>
+    <p>This is your source for movie information. You can search for movies, explore by genre, or view details of specific movies.</p>
+
+    <!-- Sentiment-based Movie Search Form -->
+    <h2>Find Movies Based on Sentiment</h2>
+    <p>Enter some text, and we'll classify the sentiment and recommend movies based on the genre!</p>
+
+    <form id="sentiment-form">
+        <div class="mb-3">
+            <label for="sentiment-text" class="form-label">Enter text:</label>
+            <textarea id="sentiment-text" class="form-control" rows="3" placeholder="Write something about a movie or your thoughts..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Get Movie Suggestions</button>
+    </form>
+
+    <div id="loading" style="display: none;">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Results container -->
+    <div id="results" class="mt-4">
+        <!-- Movies will appear here -->
+    </div>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

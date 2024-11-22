@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install packages
+        run: make install
+      - name: lint
+        run: make lint
+      - name: test
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          SERVER_HOSTNAME: ${{ secrets.SERVER_HOSTNAME }}
+          DWH_DB: ${{ secrets.DWH_DB }}
+        run: make test
+      - name: format
+        run: make format

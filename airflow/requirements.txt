@@ -1,0 +1,7 @@
+pip
+pyodbc
+SQLAlchemy
+fastapi[all]
+uvicorn[standard]
+gunicorn
+scikit-learn
