@@ -1,75 +1,104 @@
-# IDS706_alejandroparedeslatorre_assignment7_SQL
+# IDS706_Final Project Alejandro Paredes La Torre, Alex Ackerman, Christian Moreira
 
+# Movie Database Project with Flask and Airflow
 
+This project sets up a Movie Database API using Flask as the backend and Apache Airflow for workflow orchestration. The system leverages Docker for containerized deployments and PostgreSQL as the database.
 
-This repo has an implementation to perform an ETL and a CRUD operation using databricks with two tables:
-We extract data from the api:
+## Prerequisites
 
-Star wars people:
-https://swapi.dev/api/people/
+Before running the project, ensure you have the following installed:
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Docker Compose](https://docs.docker.com/compose/)
 
-Star wars planet data
-https://swapi.dev/api/planets/
-
-*This library was published in the pypi repository:*
-https://test.pypi.org/project/etl-tool-aplt/0.0.2/
-
-
-We perform basic operations upon the database
-
-* `Create` - insert
-
-* `Read`: We get the average height of the characters of star wars grouped by its planet and ordered by its average height in a descendent order
-
-```bash
-SELECT 
-avg(pe.height)
-, pl.name
-FROM aplt_starwars_people pe
-inner join aplt_starwars_planets pl on pe.homeworld = pl.url
-group by pl.name
-ORDER BY avg(pe.height) DESC
-
+## Project Structure
+```
+.
+├── backend/
+│   ├── app.py               # Flask application
+│   ├── templates/           # HTML templates for the web app
+│   ├── data/
+│       ├── db_connection.py # Database connection module
+├── airflow/
+│   ├── dags/                # Airflow DAGs
+│   ├── logs/                # Airflow logs
+│   ├── plugins/             # Airflow plugins
+├── docker-compose.yml       # Docker Compose configuration
+├── .env                     # Environment variables for the project
 ```
 
+## Getting Started
 
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-* `Update`
+2. Create a `.env` file in the root directory with the following contents:
+   ```
+   FLASK_RUN_HOST=0.0.0.0
+   AIRFLOW_UID=50000
+   _AIRFLOW_WWW_USER_USERNAME=airflow
+   _AIRFLOW_WWW_USER_PASSWORD=airflow
+   ```
 
-* `Delete`
+3. Start the project using Docker Compose:
+   ```bash
+   docker-compose up --build
+   ```
 
+   This command will:
+   - Build the Flask backend (`flask-app`) and Airflow components.
+   - Start all services, including:
+     - Flask app (accessible on [http://localhost:5000](http://localhost:5000))
+     - Airflow webserver (accessible on [http://localhost:8080](http://localhost:8080))
+     - PostgreSQL database
 
-According to the requirement we have
+4. Access the services:
+   - Flask API: [http://localhost:5000](http://localhost:5000)
+   - Airflow Dashboard: [http://localhost:8080](http://localhost:8080)
+     - Username: `airflow`
+     - Password: `airflow`
 
-* `Makefile`
+## Flask Backend Features
 
-* `Dockerfile`
+- **Home Page**: Displays the main page (`/`).
+- **Search Movies**: Search movies by name or genre (`/movies`, `/movies/<genre>`).
+- **Individual Movie**: Fetch details for a specific movie by ID (`/movie/<id>`).
 
-* `requirements.txt` with a set of specifications
+## Airflow Features
 
-* `githubactions` 
+- **DAGs Folder**: Place your custom DAGs in the `airflow/dags` directory.
+- **Monitoring**: View and monitor DAG execution via the Airflow UI.
+- **Scheduler**: Automates task execution.
 
-* `.devcontainer` for Githubcodespace 
+## Database Configuration
 
-## Purpose of project
-The purpose of this project is to build a basic CRUD using python inbuilt sqllite libraries and to implement CLI operations.
+The PostgreSQL database is configured as follows:
+- **User**: `airflow`
+- **Password**: `airflow`
+- **Database Name**: `airflow`
+- **Host**: `postgres`
 
-## The architecture for the project is presented as follows:
-![plot](sql_structure.JPG)
+You can modify the database credentials in `docker-compose.yml` if needed.
 
-## Sample CRUD Operations
+## Logs and Debugging
 
-python main.py extract-transform-load
+- Flask logs are stored in `backend/app.log`.
+- Airflow logs are stored in `airflow/logs`.
 
-python main.py create "101" "otro_v2" "175" "12333" "blonde" "green" "blue" "male" "2"
+## Stopping the Services
 
-python main.py read
+To stop the services, run:
+```bash
+docker-compose down
+```
 
-python main.py update "101" "otro_v2" "175" "12333" "blonde" "green" "blue" "male" "2"
+To remove all containers, volumes, and networks:
+```bash
+docker-compose down --volumes --remove-orphans
+```
 
-python main.py delete "101"
+---
 
-## Preparation
-1. open codespaces 
-2. load repo to code spaces
-2. Wait for the installation of all the requirements in requirements.txt
+For further questions or issues, feel free to open a discussion or raise an issue in the repository!
