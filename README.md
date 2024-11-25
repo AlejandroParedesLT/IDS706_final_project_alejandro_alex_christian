@@ -37,9 +37,15 @@ Before running the project, ensure you have the following installed:
 2. Create a `.env` file in the root directory with the following contents:
    ```
    FLASK_RUN_HOST=0.0.0.0
+   FLASK_APP=app.py
+   FLASK_ENV=development
    AIRFLOW_UID=50000
    _AIRFLOW_WWW_USER_USERNAME=airflow
    _AIRFLOW_WWW_USER_PASSWORD=airflow
+   ACCESS_TOKEN=#databricks access token
+   SERVER_HOSTNAME=#databricks server
+   DWH_DB=#databricks db
+   LLM_API_KEY=#Create a user account in Gemini for their API 
    ```
 
 3. Start the project using Docker Compose:
