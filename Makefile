@@ -1,5 +1,5 @@
 install:
-	pip install -r requirements.txt
+	pip install -r backend/requirements.txt
 format:
 	black *.py
 lint:
@@ -10,3 +10,5 @@ test:
 
 
 all: install format test lint run_cli
+
+#change

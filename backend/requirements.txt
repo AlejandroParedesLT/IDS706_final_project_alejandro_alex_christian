@@ -16,3 +16,6 @@ python-dotenv
 
 flask
 sqlalchemy
+# Fro load test
+locust
+
