@@ -1,0 +1,46 @@
+2024-12-01 21:15:21,182 - INFO - Starting Flask app...
+2024-12-01 21:15:21,195 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.1.174:8080
+2024-12-01 21:15:21,196 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 21:15:21,197 - INFO -  * Restarting with stat
+2024-12-01 21:15:21,392 - INFO - Starting Flask app...
+2024-12-01 21:15:21,399 - WARNING -  * Debugger is active!
+2024-12-01 21:15:21,400 - INFO -  * Debugger PIN: 133-943-173
+2024-12-01 21:16:51,505 - INFO - Starting Flask app...
+2024-12-01 21:16:51,514 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.1.174:8080
+2024-12-01 21:16:51,514 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 21:16:51,515 - INFO -  * Restarting with stat
+2024-12-01 21:16:51,684 - INFO - Starting Flask app...
+2024-12-01 21:16:51,691 - WARNING -  * Debugger is active!
+2024-12-01 21:16:51,691 - INFO -  * Debugger PIN: 133-943-173
+2024-12-01 21:16:56,332 - INFO - Home route accessed.
+2024-12-01 21:16:56,336 - INFO - 127.0.0.1 - - [01/Dec/2024 21:16:56] "GET / HTTP/1.1" 200 -
+2024-12-01 21:27:00,431 - INFO - Starting Flask app...
+2024-12-01 21:27:00,440 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.1.174:8080
+2024-12-01 21:27:00,440 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 21:27:00,441 - INFO -  * Restarting with stat
+2024-12-01 21:27:00,611 - INFO - Starting Flask app...
+2024-12-01 21:27:00,618 - WARNING -  * Debugger is active!
+2024-12-01 21:27:00,618 - INFO -  * Debugger PIN: 133-943-173
+2024-12-01 21:27:05,220 - INFO - Home route accessed.
+2024-12-01 21:27:05,224 - INFO - 127.0.0.1 - - [01/Dec/2024 21:27:05] "GET / HTTP/1.1" 200 -
+2024-12-01 21:29:36,535 - INFO - Starting Flask app...
+2024-12-01 21:29:36,544 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.1.174:8080
+2024-12-01 21:29:36,544 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 21:29:36,545 - INFO -  * Restarting with stat
+2024-12-01 21:29:36,715 - INFO - Starting Flask app...
+2024-12-01 21:29:36,722 - WARNING -  * Debugger is active!
+2024-12-01 21:29:36,722 - INFO -  * Debugger PIN: 133-943-173
+2024-12-01 21:29:41,370 - INFO - Home route accessed.
+2024-12-01 21:29:41,374 - INFO - 127.0.0.1 - - [01/Dec/2024 21:29:41] "GET / HTTP/1.1" 200 -

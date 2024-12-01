@@ -1,0 +1,38 @@
+name: Lint Code
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # Step 4: Run Ruff Linter
+      - name: Run Ruff
+        run: |
+          ruff check backend/ --fix
+
+      # Step 5: Lint Dockerfile with Hadolint
+      - name: Lint Dockerfile with Hadolint
+        uses: hadolint/hadolint-action@v2
+        with:
+          dockerfile: backend/Dockerfile

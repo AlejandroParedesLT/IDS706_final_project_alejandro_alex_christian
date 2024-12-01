@@ -1,0 +1,42 @@
+name: Install Dependencies
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      # Step 3: Upgrade pip and install dependencies
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Step 4: Verify Flask app installation
+      - name: Verify Flask Installation
+        run: |
+          source venv/bin/activate
+          python -c "import flask; print(f'Flask version: {flask.__version__}')"
+
+      # Step 5: Optional - Test dependency installation
+      - name: Check installed dependencies
+        run: |
+          source venv/bin/activate
+          pip list

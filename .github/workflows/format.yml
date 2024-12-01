@@ -1,0 +1,42 @@
+name: Format Code
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      # Step 3: Install Black
+      - name: Install Black
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install black
+
+      # Step 4: Run Black to Check Formatting
+      - name: Check Code Formatting
+        run: |
+          source venv/bin/activate
+          black --check backend/
+
+      # Step 5: Optional - Auto-format Code
+      - name: Auto-format Code (Optional)
+        if: github.event_name == 'pull_request'
+        run: |
+          source venv/bin/activate
+          black backend/

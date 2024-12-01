@@ -1,0 +1,55 @@
+name: Test Flask App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+      # Step 4: Start Flask app in the background
+      - name: Start Flask App
+        run: |
+          cd backend
+          source ../venv/bin/activate
+          nohup python app.py &
+        env:
+          FLASK_ENV: development
+          FLASK_APP: app.py
+
+      # Step 5: Wait for Flask app to start
+      - name: Wait for Flask App
+        run: sleep 10
+
+      # Step 6: Run the test script
+      - name: Run tests
+        run: |
+          cd backend
+          source ../venv/bin/activate
+          python test_app.py
+
+      # Step 7: Cleanup Flask app
+      - name: Cleanup
+        run: |
+          pkill -f "python app.py"

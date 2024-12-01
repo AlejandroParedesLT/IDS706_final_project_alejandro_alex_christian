@@ -1,9 +1,10 @@
 import logging
-from flask import Flask, request, jsonify, request, render_template
+from flask import Flask, request, jsonify, render_template
 from data.db_connection import DBConnection
 import requests
 import os
-from dotenv import load_dotenv
+
+# from dotenv import load_dotenv
 
 
 # Initialize Flask app
@@ -15,17 +16,19 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler("app.log"),  # Log to file
-        logging.StreamHandler()  # Log to console
-    ]
+        logging.StreamHandler(),  # Log to console
+    ],
 )
 
 # Instantiate DBConnection
 db = DBConnection()
 
+
 @app.route("/")
 def home():
     app.logger.info("Home route accessed.")
     return render_template("home.html")
+
 
 @app.route("/<page>")
 def render_page(page):
@@ -58,6 +61,7 @@ def get_movies():
         db.close()  # Ensure connection is closed
         app.logger.info("Database connection closed after fetching movies.")
 
+
 @app.route("/movie/<int:movie_id>", methods=["GET"])
 def get_movie(movie_id):
     """
@@ -82,7 +86,10 @@ def get_movie(movie_id):
         return jsonify({"error": str(e)}), 500
     finally:
         db.close()  # Ensure connection is closed
-        app.logger.info(f"Database connection closed after fetching movie ID: {movie_id}.")
+        app.logger.info(
+            f"Database connection closed after fetching movie ID: {movie_id}."
+        )
+
 
 @app.route("/search", methods=["GET"])
 def search_movies():
@@ -98,14 +105,19 @@ def search_movies():
         result = db.cursor.fetchall()
         columns = [desc[0] for desc in db.cursor.description]
         movies = [dict(zip(columns, row)) for row in result]
-        app.logger.info(f"Movies search completed for title: '{title}'. Found {len(movies)} results.")
+        app.logger.info(
+            f"Movies search completed for title: '{title}'. Found {len(movies)} results."
+        )
         return jsonify(movies)
     except Exception as e:
         app.logger.error(f"Error searching for movies with title '{title}': {e}")
         return jsonify({"error": str(e)}), 500
     finally:
         db.close()  # Ensure connection is closed
-        app.logger.info(f"Database connection closed after searching movies with title: '{title}'.")
+        app.logger.info(
+            f"Database connection closed after searching movies with title: '{title}'."
+        )
+
 
 @app.route("/bygenre", methods=["GET"])
 def by_genre():
@@ -121,14 +133,18 @@ def by_genre():
         result = db.cursor.fetchall()
         columns = [desc[0] for desc in db.cursor.description]
         movies = [dict(zip(columns, row)) for row in result]
-        app.logger.info(f"Movies search completed for genre: '{genre}'. Found {len(movies)} results.")
+        app.logger.info(
+            f"Movies search completed for genre: '{genre}'. Found {len(movies)} results."
+        )
         return jsonify(movies)
     except Exception as e:
         app.logger.error(f"Error searching for movies with genre '{genre}': {e}")
         return jsonify({"error": str(e)}), 500
     finally:
         db.close()  # Ensure connection is closed
-        app.logger.info(f"Database connection closed after searching movies with genre: '{genre}'.")
+        app.logger.info(
+            f"Database connection closed after searching movies with genre: '{genre}'."
+        )
 
 
 @app.route("/classify", methods=["POST"])
@@ -140,9 +156,9 @@ def classify_genre():
     input_text = input_data.get("text", "")
     if not input_text:
         return jsonify({"error": "Input text is required"}), 400
-    
+
     app.logger.info(f"Classifying input text: {input_text}")
-    
+
     api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={os.getenv('LLM_API_KEY')}"
     headers = {"Content-Type": "application/json"}
     payload = {
@@ -156,16 +172,16 @@ def classify_genre():
             }
         ]
     }
-    
+
     try:
         response = requests.post(api_url, headers=headers, json=payload)
         response.raise_for_status()  # Raise an HTTPError for bad responses
         result = response.json()
-        
+
         # Extract the genre from the response
         genre = result["candidates"][0]["content"]["parts"][0]["text"].strip()
         app.logger.info(f"Classified genre: {genre}")
-        
+
         try:
             db.connect()  # Establish connection
             query = "SELECT * FROM db_movies.movies WHERE genres LIKE ?"
@@ -173,14 +189,18 @@ def classify_genre():
             result = db.cursor.fetchall()
             columns = [desc[0] for desc in db.cursor.description]
             movies = [dict(zip(columns, row)) for row in result]
-            app.logger.info(f"Movies search completed for genre: '{genre}'. Found {len(movies)} results.")
+            app.logger.info(
+                f"Movies search completed for genre: '{genre}'. Found {len(movies)} results."
+            )
             return jsonify(movies)
         except Exception as e:
             app.logger.error(f"Error searching for movies with genre '{genre}': {e}")
             return jsonify({"error": str(e)}), 500
         finally:
             db.close()  # Ensure connection is closed
-            app.logger.info(f"Database connection closed after searching movies with genre: '{genre}'.")
+            app.logger.info(
+                f"Database connection closed after searching movies with genre: '{genre}'."
+            )
     except requests.exceptions.RequestException as e:
         app.logger.error(f"Error calling Gemini API: {e}")
         return jsonify({"error": "Failed to classify genre"}), 500
@@ -188,4 +208,4 @@ def classify_genre():
 
 if __name__ == "__main__":
     app.logger.info("Starting Flask app...")
-    app.run(debug=True, host='0.0.0.0', port=8080) #host='0.0.0.0', port=8080
+    app.run(debug=True, host="0.0.0.0", port=8080)  # host='0.0.0.0', port=8080
