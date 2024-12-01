@@ -479,3 +479,74 @@
 2024-11-19 13:00:34,238 - INFO - Closing session 01efa6a0-27a1-13bf-b785-d88693cb16bb
 2024-11-19 13:00:34,311 - INFO - Database connection closed after searching movies with genre: 'Action'.
 2024-11-19 13:00:34,312 - INFO - 127.0.0.1 - - [19/Nov/2024 13:00:34] "POST /classify HTTP/1.1" 200 -
+2024-12-01 02:25:20,260 - INFO - Starting Flask app...
+2024-12-01 02:25:20,575 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+2024-12-01 02:25:20,576 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 02:25:20,585 - INFO -  * Restarting with stat
+2024-12-01 02:25:21,056 - INFO - Starting Flask app...
+2024-12-01 02:25:21,076 - WARNING -  * Debugger is active!
+2024-12-01 02:25:21,100 - INFO -  * Debugger PIN: 230-924-554
+2024-12-01 02:25:31,566 - INFO - Home route accessed.
+2024-12-01 02:25:31,647 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:31] "GET / HTTP/1.1" 200 -
+2024-12-01 02:25:32,249 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:32] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-12-01 02:25:32,273 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:32] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-12-01 02:25:32,361 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:32] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-12-01 02:25:38,622 - INFO - Search_page route accessed.
+2024-12-01 02:25:38,638 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:38] "GET /search_page HTTP/1.1" 200 -
+2024-12-01 02:25:38,685 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-01 02:25:38,714 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:38] "GET /static/js/search.js HTTP/1.1" 200 -
+2024-12-01 02:25:38,754 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:38] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-12-01 02:25:39,766 - INFO - Bygenre_page route accessed.
+2024-12-01 02:25:39,783 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:39] "GET /bygenre_page HTTP/1.1" 200 -
+2024-12-01 02:25:39,811 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-01 02:25:39,838 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:39] "GET /static/js/bygenre.js HTTP/1.1" 200 -
+2024-12-01 02:25:39,889 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:39] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-12-01 02:25:40,811 - INFO - Home route accessed.
+2024-12-01 02:25:40,812 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:40] "GET / HTTP/1.1" 200 -
+2024-12-01 02:25:40,844 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-01 02:25:40,845 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:40] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-12-01 02:25:40,886 - INFO - 127.0.0.1 - - [01/Dec/2024 02:25:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-12-01 11:37:04,906 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-01 11:37:04,907 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 11:37:52,384 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+2024-12-01 11:37:52,385 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 11:39:31,589 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.166:8080
+2024-12-01 11:39:31,590 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 11:39:39,016 - INFO - Home route accessed.
+2024-12-01 11:39:39,082 - INFO - 127.0.0.1 - - [01/Dec/2024 11:39:39] "GET / HTTP/1.1" 200 -
+2024-12-01 11:39:39,749 - INFO - 127.0.0.1 - - [01/Dec/2024 11:39:39] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-12-01 11:39:39,751 - INFO - 127.0.0.1 - - [01/Dec/2024 11:39:39] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-12-01 11:39:39,816 - ERROR - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\ALEJANDRO\Documents\7. DUKE\1. IDS 706 - Data Engineering\assignments\alexup\IDS706_final_project_alejandro_alex_christian\backend\app.py", line 36, in render_page
+    return render_template("404.html"), 404
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\ALEJANDRO\Documents\5. Programming\.virtualenvs\aplt_duke\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2024-12-01 11:39:39,937 - INFO - 127.0.0.1 - - [01/Dec/2024 11:39:39] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -

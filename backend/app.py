@@ -188,4 +188,4 @@ def classify_genre():
 
 if __name__ == "__main__":
     app.logger.info("Starting Flask app...")
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=8080) #host='0.0.0.0', port=8080

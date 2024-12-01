@@ -7,3 +7,4 @@ pyproject.toml
 dist/
 etl_tool_aplt.egg-info/
 airflow/logs/*
+alejandroparedeslatorre.pem

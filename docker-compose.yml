@@ -1,15 +1,16 @@
-version: '3'
+version: '3.2'
 
 services:
   flask-app:
     build:
       context: ./backend
-    image: movie_db_backend:latest
+    image: movie_db_backend:1.2
     ports:
-      - "5000:5000"
+      - "8080:8080"
     env_file:
       - .env  # Specify the .env file to load the environment variables
     environment:
       - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=8080  # Add this line to explicitly define the port
 
 volumes: {}
