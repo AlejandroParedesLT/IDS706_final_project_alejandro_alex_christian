@@ -24,6 +24,7 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
 
       # Step 4: Run Ruff Linter
