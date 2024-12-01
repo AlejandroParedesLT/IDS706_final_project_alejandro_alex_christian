@@ -33,6 +33,6 @@ jobs:
 
       # Step 5: Lint Dockerfile with Hadolint
       - name: Lint Dockerfile with Hadolint
-        uses: hadolint/hadolint-action@v2
+        uses: hadolint/hadolint-action@v1
         with:
           dockerfile: backend/Dockerfile
