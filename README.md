@@ -1,3 +1,11 @@
+[![Install](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/install.yml/badge.svg)](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/install.yml)
+
+[![Lint](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/lint.yml/badge.svg)](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/lint.yml)
+
+[![Test](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/test.yml/badge.svg)](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/test.yml)
+
+[![Format](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/format.yml/badge.svg)](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/format.yml)
+
 # IDS706_Final Project Alejandro Paredes La Torre, Alex Ackerman, Christian Moreira
 
 # Movie Database Project with Flask and Airflow
