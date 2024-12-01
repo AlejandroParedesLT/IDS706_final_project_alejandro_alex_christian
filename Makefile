@@ -9,7 +9,8 @@ test:
 
 # Format Python code
 format:
-	black backend/*.py 
+# black backend/*.py 
+	black .
 
 # Lint Python code
 lint:

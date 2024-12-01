@@ -2,6 +2,7 @@ from databricks import sql
 import os
 from dotenv import load_dotenv
 
+
 class DBConnection:
     def __init__(self):
         """Initialize the DBConnection and load environment variables."""
@@ -15,7 +16,9 @@ class DBConnection:
             self.connection = sql.connect(
                 server_hostname=os.getenv("SERVER_HOSTNAME"),
                 http_path=os.getenv("DWH_DB"),
-                access_token=os.getenv("ACCESS_TOKEN")  # Load token from environment variables
+                access_token=os.getenv(
+                    "ACCESS_TOKEN"
+                ),  # Load token from environment variables
             )
             self.cursor = self.connection.cursor()
             print("Connected to Databricks SQL database.")
