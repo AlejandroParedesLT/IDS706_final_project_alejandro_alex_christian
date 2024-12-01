@@ -32,8 +32,7 @@ jobs:
         run: |
           ruff check backend/ --fix
 
-      # Step 5: Lint Dockerfile with Hadolint
+      # Step 5: Lint Dockerfile with Hadolint (via Docker)
       - name: Lint Dockerfile with Hadolint
-        uses: hadolint/hadolint-action@v1
-        with:
-          dockerfile: backend/Dockerfile
+        run: |
+          docker run --rm -i hadolint/hadolint < backend/Dockerfile
