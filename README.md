@@ -6,6 +6,8 @@
 
 [![Format](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/format.yml/badge.svg)](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/format.yml)
 
+[![IaC Deploy Application to AWS](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/IaC.yml/badge.svg)](https://github.com/AlejandroParedesLT/IDS706_final_project_alejandro_alex_christian/actions/workflows/IaC.yml)
+
 # IDS706_Final Project Alejandro Paredes La Torre, Alex Ackerman, Christian Moreira
 
 # Movie recommender
@@ -17,7 +19,7 @@ A unique feature of the app is its integration with the Gemini API for sentiment
 
 In addition to these features, the app maintains robust logging for tracking various interactions such as API calls, database queries, and potential errors, making it easier to troubleshoot and monitor the app's activity. This setup provides a simple yet powerful interface for users to explore movies and leverage AI-driven sentiment analysis to recommend genres based on their input.
 
-![Front page](static/app_architecture.JPG)
+![Front page](static/app_frontpage.JPG)
 
 This application was develop with flask, using docker containers and hosted by AWS ECS Fargate.
 
@@ -32,6 +34,7 @@ The project uses the file awscloudformation_ecs.yml to make an automatic redeplo
 - tagging the image
 - docker push to AWS registry
 - updates the service so it launches again to redeploy the changes 
+
 
 ## Code Structure
 ```
