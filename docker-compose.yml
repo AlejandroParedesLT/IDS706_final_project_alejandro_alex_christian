@@ -4,7 +4,7 @@ services:
   flask-app:
     build:
       context: ./backend
-    image: movie_db_backend:1.2
+    image: movie_db_backend:latest
     ports:
       - "8080:8080"
     env_file:

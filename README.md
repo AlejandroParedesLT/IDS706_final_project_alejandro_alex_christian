@@ -8,31 +8,65 @@
 
 # IDS706_Final Project Alejandro Paredes La Torre, Alex Ackerman, Christian Moreira
 
-# Movie Database Project with Flask and Airflow
+# Movie recommender
+Authors: **Alejandro Paredes La Torre**, **Alex Ackerman**, **Christian Moreira**
 
-This project sets up a Movie Database API using Flask as the backend and Apache Airflow for workflow orchestration. The system leverages Docker for containerized deployments and PostgreSQL as the database.
+This Flask web application is designed to interact with a movie database and provide several features related to movie discovery. The core functionality includes basic pages that allow users to explore movies and search them based on titles or genres. It features routes like the home page, a page for searching movies by title, and another page that allows users to find movies by genre. 
 
-## Prerequisites
+A unique feature of the app is its integration with the Gemini API for sentiment analysis, which is used to classify input text into a movie genre. When users provide text for classification, the app sends the text to the Gemini API, which analyzes the sentiment and assigns one of several predefined genres such as Action, Comedy, or Animation. Once the genre is identified, the app queries the movie database to retrieve and display movies matching the classified genre.
 
-Before running the project, ensure you have the following installed:
-- [Docker](https://www.docker.com/products/docker-desktop)
-- [Docker Compose](https://docs.docker.com/compose/)
+In addition to these features, the app maintains robust logging for tracking various interactions such as API calls, database queries, and potential errors, making it easier to troubleshoot and monitor the app's activity. This setup provides a simple yet powerful interface for users to explore movies and leverage AI-driven sentiment analysis to recommend genres based on their input.
 
-## Project Structure
+![Front page](static/app_architecture.JPG)
+
+This application was develop with flask, using docker containers and hosted by AWS ECS Fargate.
+
+# Project Architecture
+![Application Architecture](./static/app_architecture.JPG)
+
+# **IaC**
+
+The project uses the file awscloudformation_ecs.yml to make an automatic redeploy of the service whenever the commit takes place, the CI/CD called IaC handles this by:
+- login into AWS 
+- building the image
+- tagging the image
+- docker push to AWS registry
+- updates the service so it launches again to redeploy the changes 
+
+## Code Structure
 ```
 .
 ├── backend/
 │   ├── app.py               # Flask application
 │   ├── templates/           # HTML templates for the web app
+│   ├── static/              
+│       ├──js/               # Process API calls to the backend to render the html templates
+│       ├──css/              # style
 │   ├── data/
 │       ├── db_connection.py # Database connection module
-├── airflow/
-│   ├── dags/                # Airflow DAGs
-│   ├── logs/                # Airflow logs
-│   ├── plugins/             # Airflow plugins
 ├── docker-compose.yml       # Docker Compose configuration
 ├── .env                     # Environment variables for the project
 ```
+
+## Flask Backend Features
+
+- **Home Page**: Displays the main page (`/`).
+- **Search Movies**: Search movies by name or genre (`/movies`, `/movies/<genre>`).
+- **Individual Movie**: Fetch details for a specific movie by ID (`/movie/<id>`).
+
+## Logs and Debugging
+  
+Flask application logs are essential for tracking and debugging runtime behavior. Access the logs in [backend/app.log](./backend/app.log) to monitor errors, warnings, and other runtime messages.
+
+## Load test
+
+
+# Local build:
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 ## Getting Started
 
@@ -47,13 +81,10 @@ Before running the project, ensure you have the following installed:
    FLASK_RUN_HOST=0.0.0.0
    FLASK_APP=app.py
    FLASK_ENV=development
-   AIRFLOW_UID=50000
-   _AIRFLOW_WWW_USER_USERNAME=airflow
-   _AIRFLOW_WWW_USER_PASSWORD=airflow
-   ACCESS_TOKEN=#databricks access token
-   SERVER_HOSTNAME=#databricks server
-   DWH_DB=#databricks db
-   LLM_API_KEY=#Create a user account in Gemini for their API 
+   ACCESS_TOKEN=           #databricks access token
+   SERVER_HOSTNAME=        #databricks server
+   DWH_DB=                 #databricks db
+   LLM_API_KEY=            #Create a user account in Gemini for their API 
    ```
 
 3. Start the project using Docker Compose:
@@ -64,44 +95,12 @@ Before running the project, ensure you have the following installed:
    This command will:
    - Build the Flask backend (`flask-app`) and Airflow components.
    - Start all services, including:
-     - Flask app (accessible on [http://localhost:5000](http://localhost:5000))
-     - Airflow webserver (accessible on [http://localhost:8080](http://localhost:8080))
-     - PostgreSQL database
-
+     - Flask app (accessible on [http://localhost:8080](http://localhost:5000))
+     
 4. Access the services:
-   - Flask API: [http://localhost:5000](http://localhost:5000)
-   - Airflow Dashboard: [http://localhost:8080](http://localhost:8080)
-     - Username: `airflow`
-     - Password: `airflow`
-
-## Flask Backend Features
-
-- **Home Page**: Displays the main page (`/`).
-- **Search Movies**: Search movies by name or genre (`/movies`, `/movies/<genre>`).
-- **Individual Movie**: Fetch details for a specific movie by ID (`/movie/<id>`).
-
-## Airflow Features
-
-- **DAGs Folder**: Place your custom DAGs in the `airflow/dags` directory.
-- **Monitoring**: View and monitor DAG execution via the Airflow UI.
-- **Scheduler**: Automates task execution.
-
-## Database Configuration
-
-The PostgreSQL database is configured as follows:
-- **User**: `airflow`
-- **Password**: `airflow`
-- **Database Name**: `airflow`
-- **Host**: `postgres`
-
-You can modify the database credentials in `docker-compose.yml` if needed.
-
-## Logs and Debugging
-
-- Flask logs are stored in `backend/app.log`.
-- Airflow logs are stored in `airflow/logs`.
-
-## Stopping the Services
+   - Flask API: [http://localhost:8080](http://localhost:8080)
+   
+5. You can stop the service by:
 
 To stop the services, run:
 ```bash

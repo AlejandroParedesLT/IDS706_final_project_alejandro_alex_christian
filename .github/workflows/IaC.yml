@@ -1,0 +1,61 @@
+name: Deploy Application
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up AWS CLI
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      # Step 3: Set up Docker
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # Step 4: Log in to AWS ECR
+      - name: Log in to AWS ECR
+        run: |
+          aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin ${{ secrets.AWS_REGISTRY }}
+
+      # Step 5: Build Docker image
+      - name: Build Docker image
+        run: |
+          docker-compose build --no-cache
+
+      # Step 6: Tag Docker image
+      - name: Tag Docker image
+        run: |
+          docker tag movie_db_backend:latest ${{ secrets.AWS_REGISTRY }}/alejandroparedeslatorre/ids706final_alejandroparedesdeploy:latest
+
+      # Step 7: Push Docker image to ECR
+      - name: Push Docker image to ECR
+        run: |
+          docker push ${{ secrets.AWS_REGISTRY }}/alejandroparedeslatorre/ids706final_alejandroparedesdeploy:latest
+
+      # Step 8: Update ECS service
+      - name: Update ECS service
+        run: |
+          aws ecs update-service \
+            --cluster DE706_alejandroparedes \
+            --service alejandroparedeslatorre_service \
+            --task-definition ids706final_alejandroparedeslatorre \
+            --force-new-deployment
+
+      # Step 9: Confirm deployment
+      - name: Confirm deployment complete
+        run: echo "Deployment completed successfully!"
