@@ -3,6 +3,6 @@ resources:
   - type: AWS::ECS::Service
     properties:
       Cluster: DE706_alejandroparedes
-      ServiceName: alejandroparedeslatorre_service
+      ServiceName: v2_ids706_moviesapp
       TaskDefinition: ids706final_alejandroparedeslatorre
       ForceNewDeployment: true
