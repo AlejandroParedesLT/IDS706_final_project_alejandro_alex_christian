@@ -65,7 +65,8 @@ You can find the procedure here: [.github\workflows\IaC.yml](.github\workflows\I
 Flask application logs are essential for tracking and debugging runtime behavior. Access the logs in [backend/app.log](./backend/app.log) to monitor errors, warnings, and other runtime messages.
 
 ## Load test
-
+The load tests for this application are presented below, the application is robust even facing a large amount of users.
+![Application Architecture](./loadtest_results/load_test_results.png)
 
 # Local build:
 ## Prerequisites
