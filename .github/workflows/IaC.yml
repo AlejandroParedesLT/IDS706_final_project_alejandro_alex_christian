@@ -57,7 +57,7 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster DE706_alejandroparedes \
-            --service alejandroparedeslatorre_service \
+            --service v2_ids706_moviesapp \
             --task-definition ids706final_alejandroparedeslatorre \
             --force-new-deployment
 
