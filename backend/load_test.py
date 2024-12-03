@@ -1,4 +1,3 @@
-
 from locust import HttpUser, task, between, events
 from locust import LoadTestShape
 
@@ -10,11 +9,13 @@ class AppLoadTestUser(HttpUser):
     def home_page(self):
         self.client.get("/")
 
+
 class StepLoadShape(LoadTestShape):
     """
     A step load shape to ramp up users from 1 to 100 in increments.
     Users will increase by 10 every 30 seconds.
     """
+
     step_time = 30  # Time for each step in seconds
     step_users = 10  # Number of users to add per step
     max_users = 100  # Maximum number of users
@@ -26,7 +27,14 @@ class StepLoadShape(LoadTestShape):
             return None
 
         current_step = run_time // self.step_time + 1
-        return int(current_step * self.step_users), int(self.step_users / self.step_time)
+        spawn_rate = (
+            self.step_users / self.step_time if self.step_time > 0 else 1
+        )  # Prevent division by zero
+        user_count = int(
+            min(current_step * self.step_users, self.max_users)
+        )  # Cap at max_users
+        return user_count, spawn_rate
+
 
 # Hook to print stats at the end of the test
 @events.quitting.add_listener
@@ -39,8 +47,9 @@ def _(environment, **kwargs):
     print(f"Max Response Time: {stats.max_response_time} ms")
     print(f"Requests per Second: {stats.total_rps}")
 
+
 # To execute the test, run Locust in the terminal with the following command:
-# locust -f load_test.py --csv=../loadtest_results/loadtest --host http://127.0.0.1:8080 
+# locust -f load_test.py --csv=../loadtest_results/loadtest --host http://127.0.0.1:8080
 
 
 # Explanation of parameters:
