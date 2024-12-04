@@ -65,8 +65,29 @@ You can find the procedure here: [.github/workflows/IaC.yml](./.github/workflows
 Flask application logs are essential for tracking and debugging runtime behavior. Access the logs in [backend/app.log](./backend/app.log) to monitor errors, warnings, and other runtime messages.
 
 ## Load test
-The load tests for this application are presented below, the application is robust even facing a large amount of users.
-![Application Architecture](./loadtest_results/load_test_results.png)
+
+Due to fianancial constraints and api limits a full load test of the deployed app was not feasible. As a substitute, load testing was performed locally using Locust which is an open source load testing tool. Calls to the local landing page of the app were made with an increasing number of users. The results of our load test can be seen below:
+
+![alt text](loadtest_results/load_test_results.png)
+
+To alternate the load test parameters and view the results yourself. Deploy the app locally:
+
+```bash
+python backend/app.py
+```
+
+Then in a new terminal window:
+
+```bash
+# To execute the test, run Locust in the terminal with the following command:
+# locust -f load_test.py --csv=../loadtest_results/loadtest --host http://127.0.0.1:8080
+
+
+# Explanation of parameters:
+# --csv=../loadtest_results/loadtest: Generates CSV files with the load test results in the "../loadtest_results" folder with the prefix "loadtest".
+# --host http://127.0.0.1:8080: Specifies the host where your Flask app is running.
+# Go to http://localhost:8089/ to see the load test in action.
+```
 
 # Local build:
 ## Prerequisites
