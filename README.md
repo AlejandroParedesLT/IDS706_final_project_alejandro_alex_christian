@@ -37,7 +37,7 @@ The project uses the file awscloudformation_ecs.yml to make an automatic redeplo
 - docker push to AWS registry
 - updates the service so it launches again to redeploy the changes 
 
-You can find the procedure here: [.github\workflows\IaC.yml](.github\workflows\IaC.yml)
+You can find the procedure here: [.github/workflows/IaC.yml](./.github/workflows/IaC.yml)
 
 ## Code Structure
 ```
