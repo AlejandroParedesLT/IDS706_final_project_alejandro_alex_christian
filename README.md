@@ -13,7 +13,7 @@
 # Movie recommender
 Authors: **Alejandro Paredes La Torre**, **Alex Ackerman**, **Christian Moreira**
 
-This Flask web application is designed to interact with a movie database and provide several features related to movie discovery. The core functionality includes basic pages that allow users to explore movies and search them based on titles or genres. It features routes like the home page, a page for searching movies by title, and another page that allows users to find movies by genre. 
+This Flask web application is designed to interact with a movie database and provide several features related to movie discovery. The core functionality includes basic pages that allow users to explore movies and search them based on titles or genres. It features routes like the home page, a page for searching movies by title, and another page that allows users to find movies by genre..
 
 A unique feature of the app is its integration with the Gemini API for sentiment analysis, which is used to classify input text into a movie genre. When users provide text for classification, the app sends the text to the Gemini API, which analyzes the sentiment and assigns one of several predefined genres such as Action, Comedy, or Animation. Once the genre is identified, the app queries the movie database to retrieve and display movies matching the classified genre.
 
