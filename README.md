@@ -23,8 +23,9 @@ In addition to these features, the app maintains robust logging for tracking var
 
 [Movies App](http://loadbalanc-ids706mov-1344930212.us-east-2.elb.amazonaws.com/)
 
-**Demo Video**
-[![Watch the video](https://img.youtube.com/vi/qg9xXdSxwwg/0.jpg)](https://www.youtube.com/watch?v=qg9xXdSxwwg)
+#**Demo Video**
+
+[![Watch the video!](https://img.youtube.com/vi/qg9xXdSxwwg/0.jpg)](https://www.youtube.com/watch?v=qg9xXdSxwwg)
 
 This application was develop with flask, using docker containers and hosted by AWS ECS Fargate.
 
