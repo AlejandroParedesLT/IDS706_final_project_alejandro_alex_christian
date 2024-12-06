@@ -72,7 +72,7 @@ Flask application logs are essential for tracking and debugging runtime behavior
 
 ## Load test
 
-Due to fianancial constraints and api limits a full load test of the deployed app was not feasible. As a substitute, load testing was performed locally using Locust which is an open source load testing tool. Calls to the local landing page of the app were made with an increasing number of users. The results of our load test can be seen below:
+Due to fianancial constraints and api limits a full load test of the deployed app was not feasible. As a substitute, load testing was performed locally using Locust which is an open source load testing tool. Calls to the local landing page of the app were made with an increasing number of users. The results of our load test can be seen below (NOTE: we were unable to conduct a load test of 10,000 user/sec due to limitations of the github/locust connection):
 
 ![alt text](loadtest_results/load_test_results.png)
 
@@ -94,6 +94,8 @@ Then in a new terminal window:
 # --host http://127.0.0.1:8080: Specifies the host where your Flask app is running.
 # Go to http://localhost:8089/ to see the load test in action.
 ```
+# Use of GenAI:
+Generative AI was use frequently throughout this project to enhance existing code scripts as well as provide the framework to complete tasks which we were unfamiliar with such as load testing with Locust.
 
 # Local build:
 ## Prerequisites
