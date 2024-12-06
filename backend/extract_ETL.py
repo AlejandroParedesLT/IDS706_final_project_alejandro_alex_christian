@@ -48,8 +48,7 @@ def extract(
     try:
         # Load the data into a pandas DataFrame
         df = pd.read_csv(
-            temp_file_path, sep="::", header=None, engine="python",
-            encoding=encoding
+            temp_file_path, sep="::", header=None, engine="python", encoding=encoding
         )
         df.columns = ["id", "title", "genre"]  # Adjust column names
 
