@@ -5,14 +5,12 @@ import pandas as pd
 
 def clean_and_unpivot(df):
     """
-    Cleans the DataFrame to remove problematic characters and unpivots 
+    Cleans the DataFrame to remove problematic characters and unpivots
     the genre column.
     """
     # Clean problematic characters
     for col in df.columns:
-        df[col] = df[col].astype(str).str.replace(
-            r"[^\x00-\x7F]+", "", regex=True
-        )
+        df[col] = df[col].astype(str).str.replace(r"[^\x00-\x7F]+", "", regex=True)
         df[col] = df[col].str.strip()  # Remove extra spaces
 
     # Unpivot the 'genre' column
