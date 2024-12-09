@@ -38,7 +38,7 @@ This application was develop with flask, using docker containers and hosted by A
 This project adopts an ETL process to convert csv data into a table in databricks. To do so we:
 1. Extract a csv file
 2. Produce a new csv where the column genre explodes into multiple rows
-3. Load that new table into Databricks, which allws our subsequent app formation steps to reference this table and recommend movies off its informaation.
+3. Load that new table into Databricks, which allows our subsequent app formation steps to reference this table and recommend movies off its data.
 
 
 # ETL Illustration
