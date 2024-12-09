@@ -34,6 +34,21 @@ This application was develop with flask, using docker containers and hosted by A
 # Project Architecture
 ![Application Architecture](./static/app_architecture.JPG)
 
+# ETL
+This project adopts an ETL process to convert csv data into a table in databricks. To do so we:
+1. Extract a csv file
+2. Produce a new csv where the column genre explodes into multiple rows
+3. Load that new table into Databricks, which allws our subsequent app formation steps to reference this table and recommend movies off its informaation.
+
+
+# ETL Illustration
+![image](https://github.com/user-attachments/assets/f3568486-7494-4574-a477-e33db15b33b9)
+
+
+# ETL Video
+
+
+
 # **IaC**
 
 The project uses the file awscloudformation_ecs.yml to make an automatic redeploy of the service whenever the commit takes place, the CI/CD called IaC handles this by:
