@@ -48,7 +48,7 @@ This project adopts an ETL process to convert csv data into a table in databrick
 ![image](https://github.com/user-attachments/assets/c08ff038-cf4d-4ada-bec2-7383e404261a)
 
 # ETL Video
-
+https://youtu.be/0bRFuwx5_6E
 
 
 # **IaC**
