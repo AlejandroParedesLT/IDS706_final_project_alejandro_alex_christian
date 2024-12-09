@@ -1,72 +1,73 @@
+"""
+Transforms and Loads data into the local Databricks database
+"""
+
+import csv
 import os
-import requests
-import pandas as pd
+from dotenv import load_dotenv
+from databricks import sql
 
 
-def clean_and_unpivot(df):
-    """
-    Cleans the DataFrame to remove problematic characters and unpivots
-    the genre column.
-    """
-    # Clean problematic characters
-    for col in df.columns:
-        df[col] = df[col].astype(str).str.replace(r"[^\x00-\x7F]+", "", regex=True)
-        df[col] = df[col].str.strip()  # Remove extra spaces
-
-    # Unpivot the 'genre' column
-    df["genre"] = df["genre"].str.split("|")  # Split genres into lists
-    unpivoted_df = df.explode("genre").reset_index(drop=True)  # Explode
-
-    return unpivoted_df
-
-
-def extract(
-    url=(
-        "https://github.com/mohammedalawami/Movielens-Dataset/raw/"
-        "master/datasets/movies.dat"
-    ),
-    unpivoted_file_path="data/movies_unpivoted.csv",
-    temp_file_path="data/temp_movies.dat",
-    timeout=10,
-    encoding="latin1",  # Encoding that can handle non-UTF-8 characters
-):
-    """
-    Extracts a dataset from a URL, processes it (cleaning and unpivoting),
-    and saves it as a CSV file.
-    """
-    # Create the directory if it doesn't exist
-    os.makedirs(os.path.dirname(unpivoted_file_path), exist_ok=True)
-
-    # Download the file from the URL
-    with requests.get(url, timeout=timeout) as r:
-        r.raise_for_status()  # Raise error for bad HTTP responses
-        with open(temp_file_path, "wb") as f:
-            f.write(r.content)
-
+# Load the CSV file and insert it into a new Databricks database
+def load(dataset="data/movies_unpivoted.csv"):
+    """Transforms and Loads data into the local Databricks database"""
+    # Read the dataset
     try:
-        # Load the data into a pandas DataFrame
-        df = pd.read_csv(
-            temp_file_path, sep="::", header=None, engine="python", encoding=encoding
-        )
-        df.columns = ["id", "title", "genre"]  # Adjust column names
-
-        # Clean and unpivot the DataFrame
-        unpivoted_df = clean_and_unpivot(df)
-
-        # Save the cleaned and unpivoted DataFrame as a CSV file
-        unpivoted_df.to_csv(unpivoted_file_path, index=False)
-        print(f"Data saved as unpivoted CSV at {unpivoted_file_path}")
-        print(unpivoted_df.head())  # Display the first 5 rows
-
-        # Remove the temporary .dat file
-        os.remove(temp_file_path)
-
+        payload = csv.reader(open(dataset, newline=""), delimiter=",")
+        next(payload)  # Skip the header row
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Dataset file {dataset} not found.")
     except Exception as e:
-        print(f"Error reading or processing the file: {e}")
+        raise Exception(f"Error reading the dataset: {e}")
+    print("here 0")
+    # Load environment variables
+    load_dotenv()
+    print("here 1")
+    server_hostname = "dbc-c95fb6bf-a65d.cloud.databricks.com"
+    http_path = "/sql/1.0/warehouses/2d6f41451e6394c0"
+    access_token = os.getenv("DATABRICKS_API_KEY")
+    print(server_hostname)
+    print(http_path)
+    # Validate environment variables
+    if not server_hostname or not http_path or not access_token:
+        raise ValueError("Environment variables are not properly set in the .env file.")
 
-    return "success"
+    print("here 2")
+    # Connect to Databricks using credentials from .env
+    with sql.connect(
+        server_hostname=server_hostname,
+        http_path=http_path,
+        access_token=access_token,
+    ) as connection:
+        with connection.cursor() as cursor:
+            print("check")
+            # Create the table if it doesn't exist
+            cursor.execute(
+                """CREATE TABLE IF NOT EXISTS csm87_movies_final 
+                   (movie_id INT, title STRING, genres STRING);
+                """
+            )
+
+            # Check if the table already contains data
+            cursor.execute("SELECT COUNT(*) FROM csm87_movies_final")
+            result = cursor.fetchone()
+            if result and result[0] == 0:  # Table is empty
+                print("Table is empty, inserting data...")
+
+                # Build and execute the SQL INSERT query
+                string_sql = "INSERT INTO csm87_movies_final VALUES"
+                for row in payload:
+                    string_sql += f"\n{tuple(row)},"
+                string_sql = (
+                    string_sql.rstrip(",") + ";"
+                )  # Remove trailing comma and add semicolon
+                cursor.execute(string_sql)
+                print("Data successfully inserted into csm87_movies.")
+            else:
+                print("Table already contains data. No insertion needed.")
+
+    return "Database loaded or already loaded."
 
 
-# Run the extract function
 if __name__ == "__main__":
-    extract()
+    print(load())

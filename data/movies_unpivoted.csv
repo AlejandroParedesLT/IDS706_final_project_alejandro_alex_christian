@@ -1,4 +1,4 @@
-id,title,genre
+movie_id,title,genres
 1,Toy Story (1995),Animation
 1,Toy Story (1995),Children's
 1,Toy Story (1995),Comedy

@@ -52,6 +52,7 @@ def extract(
 
         # Clean and unpivot the DataFrame
         unpivoted_df = clean_and_unpivot(df)
+        unpivoted_df = unpivoted_df.rename(columns={'id': 'movie_id', 'genre':'genres'})
 
         # Save the cleaned and unpivoted DataFrame as a CSV file
         unpivoted_df.to_csv(unpivoted_file_path, index=False)
